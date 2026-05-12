@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Packing List Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Main Landing Page Content -->
+    <div class="landing-page">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-plane-departure logo-icon"></i> <span>Travel</span>Nexo
+            </div>
+        </nav>
+
+        <header class="hero">
+            <div class="glow-orb orb-1"></div>
+            <div class="glow-orb orb-2"></div>
+
+            <h1 class="shiny-text">Smart AI Packing List</h1>
+            <p class="subtitle">Your intelligent travel companion. Never forget your essentials again, perfectly
+                tailored to your destination's real-time weather.</p>
+        </header>
+
+        <section class="slider-section">
+            <h2 class="section-title">Explore Popular Destinations</h2>
+
+            <div class="slider-container">
+                <div class="slider-track">
+                    <!-- Slide 1: Taj Mahal -->
+                    <div class="slide-card">
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop"
+                            alt="Taj Mahal">
+                        <div class="slide-overlay">
+                            <h3>Agra, India</h3>
+                        </div>
+                    </div>
+                    <!-- Slide 2: Himalayas -->
+                    <div class="slide-card">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop"
+                            alt="Himalayas">
+                        <div class="slide-overlay">
+                            <h3>Manali, India</h3>
+                        </div>
+                    </div>
+                    <!-- Slide 3: Paris -->
+                    <div class="slide-card">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop"
+                            alt="Paris">
+                        <div class="slide-overlay">
+                            <h3>Paris, France</h3>
+                        </div>
+                    </div>
+                    <!-- Slide 4: Tokyo -->
+                    <div class="slide-card">
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=800&auto=format&fit=crop"
+                            alt="Tokyo">
+                        <div class="slide-overlay">
+                            <h3>Tokyo, Japan</h3>
+                        </div>
+                    </div>
+                    <!-- Slide 5: Swiss Alps -->
+                    <div class="slide-card">
+                        <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=800&auto=format&fit=crop"
+                            alt="Swiss Alps">
+                        <div class="slide-overlay">
+                            <h3>Swiss Alps</h3>
+                        </div>
+                    </div>
+                    <!-- Duplicated for infinite scrolling -->
+                    <div class="slide-card">
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop"
+                            alt="Taj Mahal">
+                        <div class="slide-overlay">
+                            <h3>Agra, India</h3>
+                        </div>
+                    </div>
+                    <div class="slide-card">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop"
+                            alt="Himalayas">
+                        <div class="slide-overlay">
+                            <h3>Manali, India</h3>
+                        </div>
+                    </div>
+                    <div class="slide-card">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop"
+                            alt="Paris">
+                        <div class="slide-overlay">
+                            <h3>Paris, France</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2 class="section-title">Why Use Nexo?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-cloud-sun feature-icon"></i>
+                    <h3>Weather Aware</h3>
+                    <p>Nexo pulls real-time climate data to ensure you're prepared for sun, rain, or snow.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-brain feature-icon"></i>
+                    <h3>AI Powered</h3>
+                    <p>Powered by Google Gemini to intelligently categorize and build your perfect list.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-bolt feature-icon"></i>
+                    <h3>Instant & Easy</h3>
+                    <p>No account required. Just type your destination and get an actionable packing list.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Floating Chatbot Widget -->
+    <div class="chatbot-widget-container" id="chatbot-widget">
+        <div class="app-container" id="app-container">
+            <header class="app-header">
+                <div class="header-info">
+                    <div class="bot-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div>
+                        <h1>Hey I'm Nexo</h1>
+                        <p class="status">Online | Weather-Aware</p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button id="reset-btn" class="icon-btn" title="Start Over"><i class="fas fa-redo"></i></button>
+                    <button id="close-chat-btn" class="icon-btn" title="Close"><i class="fas fa-times"></i></button>
+                </div>
+            </header>
+
+            <main id="chat-container" class="chat-container">
+                <!-- Messages will be injected here -->
+            </main>
+
+            <footer class="app-footer">
+                <div class="suggestion-chips" id="suggestion-chips">
+                    <button class="chip" onclick="handleChipClick('Hi')">Say Hi 👋</button>
+                </div>
+                <div class="input-area">
+                    <input type="text" id="user-input" placeholder="Type a destination or say Hi..." autocomplete="off">
+                    <button id="send-btn" class="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Toggle Button with Typing Label -->
+        <div class="chatbot-toggler-wrapper">
+            <div class="toggler-label" id="toggler-label">
+                <span class="typing-text" id="typing-text"></span>
+            </div>
+            <button class="chatbot-toggler" id="chatbot-toggler">
+                <i class="fas fa-comment-dots"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
